@@ -5,3 +5,8 @@ def menu_principal():
     [2] - CONSULTAS
     [3] - SAIR DO SISTEMA """)
     print("="*20)
+    
+    opcao = str(input("Opção: "))
+
+    return opcao    
+
