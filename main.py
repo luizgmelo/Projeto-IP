@@ -1,5 +1,6 @@
 from menus import *
 
+banco_de_dados = {}
 def main():
     while True:
         opcao_escolhida = menu_principal()
