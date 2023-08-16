@@ -8,7 +8,30 @@ def menu_principal():
     
     opcao = str(input("Opção: "))
 
-    return opcao    
+    return opcao
+
+def menu_cadastro():
+    while True:
+        print("="*20)
+        print("""
+        [1] - PESSOAS
+        [2] - VEICULOS
+        [3] - HÓRARIOS
+        [4] - VOLTAR  """)
+        print("="*20)
+
+        opcao = str(input("Opção: "))
+
+        if opcao == '1':
+            return menu_pessoas()
+        elif opcao == '2':
+            return menu_veiculos()
+        elif opcao == '3':
+            return menu_horarios()
+        elif opcao == '4':
+            return main()
+        else:
+            print("Opção Inválida, Tente Novamente")
 
 def menu_veiculos():
     print("="*20)
