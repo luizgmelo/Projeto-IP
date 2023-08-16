@@ -4,13 +4,13 @@ banco_de_dados = {}
 def main():
     while True:
         opcao_escolhida = menu_principal()
-
+        
         if opcao_escolhida not in '123':
             print("\nOpção Inválida. Tente Novamente\n")
             continue
 
         if opcao_escolhida == '1':
-            print("MENU Opções de Cadastros")
+            return menu_cadastro()
         elif opcao_escolhida == '2':
             print("MENU Opções de Consultas")
         elif opcao_escolhida == '3':
