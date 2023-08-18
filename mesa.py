@@ -17,3 +17,7 @@ def editar_mesa(mesa):
     mesa["quant_cadeiras"] = int(input("Digite a nova quantidade de cadeiras: "))
     return True
 
+def deletar_mesa(mesa):
+    mesas.remove(mesa)
+    return True
+
