@@ -13,3 +13,7 @@ def pesquisar_mesa(numero):
             return mesa
     return False
 
+def editar_mesa(mesa):
+    mesa["quant_cadeiras"] = int(input("Digite a nova quantidade de cadeiras: "))
+    return True
+
