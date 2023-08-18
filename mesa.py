@@ -27,4 +27,17 @@ def deletar_mesa(mesa):
     else:
         return print("Mesa não existe")
 
+def listar_mesas():
+    if mesas == []:
+        return print("Não há mesas")
+    else:
+        print("="*30)
+        print("Listagem das mesas".center(30))
+        print("="*30)
+        for mesa in mesas:
+            print("Mesa", mesa["numero"])
+            print("Quantidade de Cadeiras:", mesa["quant_cadeiras"])
+            print("-"*30)
+        print("="*30)
+
 
