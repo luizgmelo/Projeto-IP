@@ -6,3 +6,10 @@ def criar_mesa(numero, quant_cadeiras):
 def save_mesa(mesa):
     mesas.append(mesa)
     return True
+
+def pesquisar_mesa(numero):
+    for mesa in mesas:
+        if numero == mesa["numero"]:
+            return mesa
+    return False
+
