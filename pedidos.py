@@ -11,6 +11,6 @@ def criar_pedido(id, num_mesa, produtos, preco, pagamento, data):
         }
 
 
-def save_pedido(pedido):
+def salvar_pedido(pedido):
     pedidos.append(pedido)
-    return True 
+    return True
