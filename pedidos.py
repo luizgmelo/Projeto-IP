@@ -28,3 +28,16 @@ def pesquisar_pedido(mesa):
         return "Mesa não existe"
 
 
+def listar_pedidos():
+    if pedidos == []:
+        return print("Não há pedidos")
+    else:
+        print("="*30)
+        print("Listagem dos pedidos".center(30))
+        print("="*30)
+        for pedido in pedidos:
+            for chave,valor in pedido.items():
+                print("{}:".format(chave.capitalize()), valor)
+            print("-"*30)
+    print("="*30)
+
