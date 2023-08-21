@@ -12,10 +12,12 @@ def criar_pedido(id, num_mesa, produtos, preco, pagamento, data):
         "data": data
         }
 
-
-def salvar_pedido(pedido):
-    pedidos.append(pedido)
-    return True
+def salvar_pedido(pedido, mesa_existe):
+    if mesa_existe:
+        pedidos.append(pedido)
+        return "Pedido criado com sucesso!"
+    else:
+        return "Mesa não existe.\nÉ criar uma mesa para fazer o pedido."
 
 
 def pesquisar_pedido(mesa):
@@ -40,4 +42,5 @@ def listar_pedidos():
                 print("{}:".format(chave.capitalize()), valor)
             print("-"*30)
     print("="*30)
+
 
