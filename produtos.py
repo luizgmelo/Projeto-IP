@@ -40,3 +40,10 @@ def editar_produto(nome_produto):
                 return ''
     return "Produto não existe.\nVerifique se há erros de digitação.\nDigite o nome do produto completo para a edicao ter sucesso."
         
+def deletar_produto(nome_produto):
+    for produto in produtos:
+        if nome_produto == produto["nome"]:
+            produtos.remove(produto)
+            return "Produto removido com sucesso!"
+    return "Produto não existe"
+
