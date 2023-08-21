@@ -47,3 +47,22 @@ def deletar_produto(nome_produto):
             return "Produto removido com sucesso!"
     return "Produto não existe"
 
+def listar_produtos():
+    if produtos == []:
+        print("Não existe produto cadastrado no sistema")
+    else:
+        print("="*30)
+        print("Listagem dos produtos".center(30))
+        print("="*30)
+        # pega os dicionarios da lista
+        for produto in produtos:
+            # chave e valor dos dicionarios 
+            for chave, valor in produto.items():
+                # se chave for id nao mostra
+                if chave == "id":
+                    continue
+                # mostra na tela chave e valor
+                print("{}:".format(chave.capitalize()), valor)
+            print("-"*30)
+        print("="*30)
+
