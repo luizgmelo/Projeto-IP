@@ -30,6 +30,14 @@ def pesquisar_pedido(mesa):
         return "Mesa não existe"
 
 
+def deletar_pedido(num_mesa):
+    for pedido in pedidos:
+        if (num_mesa == pedido["num_mesa"]):
+            pedidos.remove(pedido)
+            return "Pedido removido com sucesso!" 
+    return "Pedido não existe"
+    
+
 def listar_pedidos():
     if pedidos == []:
         return print("Não há pedidos")
