@@ -40,5 +40,20 @@ def menu_produtos():
             [5] - VOLTAR""")
     print("=" * 20)
 
+def menu_editar_produto():
+    print("=" * 20)
+    print(f""" MENU EDITAR PRODUTO
+[1] - EDITAR NOME
+[2] - EDITAR TAMANHO
+[3] - EDITAR PRECO
+[4] - VOLTAR""")
+    print("=" * 20)
+    
+    escolha = str(input("Escolha: "))
+
+    return escolha
+
+
+
 
 
