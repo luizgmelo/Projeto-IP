@@ -45,8 +45,8 @@ def main():
             elif opcao_produto == '2':
                 listar_produtos()
             elif opcao_produto == '3':
-                produto = str(input("Sabor da pizza:"))
-                print(editar_produto(pesquisar_produto(produto)))
+                produto = str(input("Sabor da pizza que vai editar:"))
+                print(editar_produto(produto))
 
 
 

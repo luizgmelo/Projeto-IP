@@ -13,8 +13,7 @@ def pesquisar_produto(nome_produto):
     for produto in produtos:
         if nome_produto.lower() == produto["nome"].lower():
             return produto 
-    else:
-        return "Produto não existe.\nVerifique se há erros de digitação.\nDigite o nome do produto completo para a pesquisa ter sucesso."
+    return "Produto não existe.\nVerifique se há erros de digitação.\nDigite o nome do produto completo para a pesquisa ter sucesso."
 
 def editar_produto(nome_produto):
     # busca o produto
