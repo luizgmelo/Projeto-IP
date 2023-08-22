@@ -16,14 +16,14 @@ def pesquisar_mesa(numero):
 def editar_mesa(mesa):
     if mesa:
         mesa["quant_cadeiras"] = int(input("Digite a nova quantidade de cadeiras: "))
-        return True
+        return print("Mesa editada com sucesso")
     else:
         return print("Mesa não existe")
 
 def deletar_mesa(mesa):
     if mesa:
         mesas.remove(mesa)
-        return True
+        return print("Mesa deletada com sucesso")
     else:
         return print("Mesa não existe")
 

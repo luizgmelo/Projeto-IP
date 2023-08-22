@@ -2,9 +2,8 @@ def menu_principal():
     print("=" * 20)
     print(""" OPÇÕES DO SISTEMA:
             [1] - MESAS
-            [2] - PEDIDOS
-            [3] - PRODUTOS
-            [4] - SAIR""")
+            [2] - PRODUTOS
+            [3] - SAIR""")
     print("=" * 20)
     opcao = str(input("Opção: "))
     return opcao
@@ -18,7 +17,10 @@ def menu_mesas():
             [4] - DELETAR MESA
             [5] - VOLTAR""")
     print("=" * 20)
-   
+    
+    opcao = str(input("Opcão: "))
+
+    return opcao
 
 def menu_pedido():
     print("=" * 20)
@@ -30,6 +32,10 @@ def menu_pedido():
             [5] - VOLTAR""")
     print("=" * 20)
 
+    opcao = str(input("Opcão: "))
+
+    return opcao
+
 def menu_produtos():
     print("=" * 20)
     print("""
@@ -39,6 +45,10 @@ def menu_produtos():
             [4] - DELETAR PRODUTO
             [5] - VOLTAR""")
     print("=" * 20)
+
+    opcao = str(input("Opcão: "))
+
+    return opcao
 
 def menu_editar_produto():
     print("=" * 20)
