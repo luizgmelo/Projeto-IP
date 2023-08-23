@@ -2,8 +2,8 @@ from menus import menu_editar_produto
 
 produtos = []
 
-def criar_produto(id, nome, tamanho, preco, descricao):
-    return dict(id=id, nome=nome, tamanho=tamanho, preco=preco, descricao=descricao)
+def criar_produto(nome, tamanho, preco, descricao):
+    return dict(nome=nome, tamanho=tamanho, preco=preco, descricao=descricao)
 
 def salvar_produto(produto):
     produtos.append(produto)
