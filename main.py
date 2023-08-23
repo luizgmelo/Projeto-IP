@@ -47,8 +47,11 @@ def main():
             elif opcao_produto == '3':
                 produto = str(input("Sabor da pizza que vai editar:"))
                 print(editar_produto(produto))
-
-
+            elif opcao_produto == '4':
+                produto = str(input("Digite o sabor da pizza que vai deletar: "))
+                print(deletar_produto(produto))
+               
+    
 
 main()
 

@@ -3,9 +3,12 @@ def menu_principal():
     print(""" OPÇÕES DO SISTEMA:
             [1] - MESAS
             [2] - PRODUTOS
-            [3] - SAIR""")
+            [3] - FUNCIONÁRIOS
+            [4] - SAIR""")
     print("=" * 20)
+
     opcao = str(input("Opção: "))
+
     return opcao
 
 def menu_mesas():
@@ -18,21 +21,7 @@ def menu_mesas():
             [5] - VOLTAR""")
     print("=" * 20)
     
-    opcao = str(input("Opcão: "))
-
-    return opcao
-
-def menu_pedido():
-    print("=" * 20)
-    print("""
-            [1] - CADASTRAR PEDIDO
-            [2] - LISTAR PEDIDOS
-            [3] - EDITAR PEDIDO
-            [4] - DELETAR PEDIDO
-            [5] - VOLTAR""")
-    print("=" * 20)
-
-    opcao = str(input("Opcão: "))
+    opcao = str(input("Opção: "))
 
     return opcao
 
@@ -46,20 +35,36 @@ def menu_produtos():
             [5] - VOLTAR""")
     print("=" * 20)
 
-    opcao = str(input("Opcão: "))
+    opcao = str(input("Opção: "))
+
+    return opcao
+
+def menu_funcionario():
+    print('=' * 20)
+    print("""
+            [1] - CADASTRAR FUNCIONÁRIO
+            [2] - LISTAR FUNCIONÁRIOS
+            [3] - EDITAR FUNCIONÁRIO
+            [4] - DELETAR FUNCIONÁRIO
+            [5] - PESQUISAR FUNCIONÁRIO
+            [6] - VOLTAR""") 
+    print('='*20)
+
+    opcao = str(input("Opção: "))
 
     return opcao
 
 def menu_editar_produto():
     print("=" * 20)
-    print(f""" MENU EDITAR PRODUTO
-[1] - EDITAR NOME
-[2] - EDITAR TAMANHO
-[3] - EDITAR PRECO
-[4] - VOLTAR""")
+    print(""" 
+         MENU EDITAR PRODUTO
+         [1] - EDITAR NOME
+         [2] - EDITAR TAMANHO
+         [3] - EDITAR PREÇO
+         [4] - VOLTAR""")
     print("=" * 20)
     
-    escolha = str(input("Escolha: "))
+    escolha = str(input("Opção: "))
 
     return escolha
 

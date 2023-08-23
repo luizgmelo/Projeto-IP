@@ -27,13 +27,13 @@ def editar_produto(nome_produto):
             # funcao de cada opcao
             if opcao == '1':
                 produto["nome"] = str(input("Digite o novo nome do produto: "))
-                return "Produto editado com suceso"
+                return "Produto editado com sucesso"
             elif opcao == '2':
                 produto["tamanho"] = str(input("Digite o novo tamanho do produto (P/M/G): ")).upper()
-                return "Produto editado com suceso"
+                return "Produto editado com sucesso"
             elif opcao == '3':
                 produto["preco"] = str(input("Digite o novo preço do produto: ")).replace(',', '.')
-                return "Produto editado com suceso"
+                return "Produto editado com sucesso"
             elif opcao == '4':
                 # volta para o menu anterior
                 return ''
