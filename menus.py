@@ -64,11 +64,22 @@ def menu_editar_produto():
          [4] - VOLTAR""")
     print("=" * 20)
     
-    escolha = str(input("Opção: "))
+    opcao = str(input("Opção: "))
 
-    return escolha
+    return opcao
 
+def menu_editar_funcionario():
+    print("=" * 20)
+    print(""" 
+            MENU EDITAR FUNCIONARIO
+            [1] - EDITAR NOME
+            [2] - EDITAR SALARIO
+            [3] - EDITAR FUNCAO DO FUNCIONARIO
+            [4] - VOLTAR""")
+    print("=" * 20)
 
+    opcao = str(input("Opção: "))
 
+    return opcao
 
 
