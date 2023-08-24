@@ -2,7 +2,9 @@ from time import sleep
 from mesa import *
 from pedidos import *
 from produtos import *
+from funcionario import *
 from menus import *
+
 
 
 
@@ -43,11 +45,43 @@ def main():
             elif opcao_produto == '4':
                 produto = str(input("Digite o sabor da pizza que vai deletar: "))
                 print(deletar_produto(produto))
+        if opcao == '3':
+            opcao_funcionario = menu_funcionario()
+            if opcao_funcionario == '1':
+                nome = str(input("Digite o nome do funcionário: "))
+                salario = str(input("Digite o salário do funcionário: "))
+                funcao = str(input("Digite a função do funcionário: "))
+                (salvar_funcionario(criar_funcionario(nome, salario, funcao)))
+                print("Funcionário cadastrado com sucesso!")
+            elif opcao_funcionario == '2':
+                listar_funcionario()
+            elif opcao_funcionario == '3':
+                nome_funcionario = str(input("Digite o nome do funcionário: "))
+                funcionario_existe = verifica_funcionario_existe(nome_funcionario)
+                if funcionario_existe:
+                    editar_funcionario(pesquisar_funcionario(nome_funcionario))
+                else:
+                    print("Funcionário não existe")
+            elif opcao_funcionario == '4':
+                nome_funcionario = str(input("Digite o nome do funcionário que vai deletar: "))
+                funcionario_existe = verifica_funcionario_existe(nome_funcionario)
+                if funcionario_existe:
+                    deletar_funcionario(pesquisar_funcionario(nome_funcionario))
+                else:
+                    print("Funcionário não existe")
+            elif opcao_funcionario == '5':
+                nome_funcionario = str(input("Digite o nome do funcionário que vai pesquisar: "))
+                funcionario_existe = verifica_funcionario_existe(nome_funcionario)
+                if funcionario_existe:
+                    pesquisar_funcionario(nome_funcionario)
+                else:
+                    print("Funcionário não existe")              
         if opcao == '4':
             salvar_banco_mesa()
             break
+           
 
-
+        
 main()
 
 
