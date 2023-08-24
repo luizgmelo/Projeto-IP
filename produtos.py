@@ -1,4 +1,5 @@
 from menus import menu_editar_produto
+import json
 
 produtos = []
 
@@ -65,3 +66,12 @@ def listar_produtos():
             print("-"*30)
         print("="*30)
 
+
+def salvar_banco_produtos():
+    with open('banco_produtos.json', 'w') as banco_produtos:
+        json.dump(produtos, banco_produtos, indent=4)
+
+def ler_banco_produtos():
+    with open('banco_produtos.json', 'r') as banco_produtos:
+        global produtos
+        produtos = json.load(banco_produtos)
