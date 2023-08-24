@@ -10,42 +10,49 @@ def salvar_produto(produto):
     produtos.append(produto)
     return True
 
+def verifica_produto_existe(nome_produto):
+    for produto in produtos:
+        if nome_produto.lower() == produto["nome"].lower():
+            return True 
+    return False 
+
 def pesquisar_produto(nome_produto):
     for produto in produtos:
         if nome_produto.lower() == produto["nome"].lower():
+            print("="*30)
+            print("Dados do produto {}".format(produto["nome"]).center(30))
+            print("="*30)
+            for chave, valor in produto.items():
+                print("{}:".format(chave.capitalize()), valor)
+            print("="*30)
             return produto 
-    return "Produto não existe.\nVerifique se há erros de digitação.\nDigite o nome do produto completo para a pesquisa ter sucesso."
 
-def editar_produto(nome_produto):
-    # busca o produto
-    for produto in produtos:
-        if nome_produto.lower() == produto["nome"].lower():
-            # recebe o opcao do menu
-            opcao = menu_editar_produto()
-            # valida opcao
-            if opcao not in '1234':
-                return "Opcao nao existe"
-            # funcao de cada opcao
-            if opcao == '1':
-                produto["nome"] = str(input("Digite o novo nome do produto: "))
-                return "Produto editado com sucesso"
-            elif opcao == '2':
-                produto["tamanho"] = str(input("Digite o novo tamanho do produto (P/M/G): ")).upper()
-                return "Produto editado com sucesso"
-            elif opcao == '3':
-                produto["preco"] = str(input("Digite o novo preço do produto: ")).replace(',', '.')
-                return "Produto editado com sucesso"
-            elif opcao == '4':
-                # volta para o menu anterior
-                return ''
-    return "Produto não existe.\nVerifique se há erros de digitação.\nDigite o nome do produto completo para a edicao ter sucesso."
+def editar_produto(produto):
+        # recebe o opcao do menu
+        opcao = menu_editar_produto()
+        # valida opcao
+        if opcao not in '1234':
+            return "Opcao nao existe"
+        # funcao de cada opcao
+        if opcao == '1':
+            produto["nome"] = str(input("Digite o novo nome do produto: "))
+            return print("Produto editado com sucesso")
+        elif opcao == '2':
+            produto["tamanho"] = str(input("Digite o novo tamanho do produto (P/M/G): ")).upper()
+            return print("Produto editado com sucesso")
+        elif opcao == '3':
+            produto["preco"] = str(input("Digite o novo preço do produto: ")).replace(',', '.')
+            return print("Produto editado com sucesso")
+        elif opcao == '4':
+            produto["descricao"] = str(input("Digite o novo preço do produto: ")).replace(',', '.')
+            return print("Produto editado com sucesso")
+        elif opcao == '5':
+            # volta para o menu anterior
+            return ''
         
-def deletar_produto(nome_produto):
-    for produto in produtos:
-        if nome_produto == produto["nome"]:
-            produtos.remove(produto)
-            return "Produto removido com sucesso!"
-    return "Produto não existe"
+def deletar_produto(produto):
+    produtos.remove(produto)
+    return print("Produto removido com sucesso!")
 
 def listar_produtos():
     if produtos == []:
@@ -56,12 +63,7 @@ def listar_produtos():
         print("="*30)
         # pega os dicionarios da lista
         for produto in produtos:
-            # chave e valor dos dicionarios 
             for chave, valor in produto.items():
-                # se chave for id nao mostra
-                if chave == "id":
-                    continue
-                # mostra na tela chave e valor
                 print("{}:".format(chave.capitalize()), valor)
             print("-"*30)
         print("="*30)

@@ -57,11 +57,27 @@ def main():
             elif opcao_produto == '2':
                 listar_produtos()
             elif opcao_produto == '3':
-                produto = str(input("Sabor da pizza que vai editar:"))
-                print(editar_produto(produto))
+                nome_produto = str(input("Sabor da pizza que vai editar:"))
+                produto_existe = verifica_produto_existe(nome_produto)
+                if produto_existe:
+                    editar_produto(pesquisar_produto(nome_produto))
+                else:
+                    print("Produto não existe")
             elif opcao_produto == '4':
-                produto = str(input("Digite o sabor da pizza que vai deletar: "))
-                print(deletar_produto(produto))
+                nome_produto = str(input("Digite o sabor da pizza que vai deletar: "))
+                produto_existe = verifica_produto_existe(nome_produto)
+                if produto_existe:
+                    deletar_produto(pesquisar_produto(nome_produto))
+                else:
+                    print("Produto não existe")
+            elif opcao_produto == '5':
+                nome_produto = str(input("Digite o sabor da pizza que vai pesquisar: "))
+                produto_existe = verifica_produto_existe(nome_produto)
+                if produto_existe:
+                    pesquisar_produto(nome_produto)
+                else:
+                    print("Produto não existe")
+                
         if opcao == '3':
             opcao_funcionario = menu_funcionario()
             if opcao_funcionario == '1':

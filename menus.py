@@ -33,7 +33,8 @@ def menu_produtos():
             [2] - LISTAR PRODUTOS
             [3] - EDITAR PRODUTO
             [4] - DELETAR PRODUTO
-            [5] - VOLTAR""")
+            [5] - PESQUISAR PRODUTO
+            [6] - VOLTAR""")
     print("=" * 20)
 
     opcao = str(input("Opção: "))
@@ -62,7 +63,8 @@ def menu_editar_produto():
          [1] - EDITAR NOME
          [2] - EDITAR TAMANHO
          [3] - EDITAR PREÇO
-         [4] - VOLTAR""")
+         [4] - EDITAR DESCRICAO
+         [5] - VOLTAR""")
     print("=" * 20)
     
     opcao = str(input("Opção: "))
