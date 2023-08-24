@@ -18,7 +18,8 @@ def menu_mesas():
             [2] - LISTAR MESAS
             [3] - EDITAR MESA
             [4] - DELETAR MESA
-            [5] - VOLTAR""")
+            [5] - PESQUISAR MESA
+            [6] - VOLTAR""")
     print("=" * 20)
     
     opcao = str(input("Opção: "))

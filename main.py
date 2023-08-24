@@ -25,11 +25,26 @@ def main():
             elif opcao_mesa == '2':
                 listar_mesas()
             elif opcao_mesa == '3':
-                mesa = str(input("Número da mesa: "))
-                editar_mesa(pesquisar_mesa(mesa))
+                num_mesa = str(input("Número da mesa: "))
+                mesa_existe = verifica_mesa_existe(num_mesa)
+                if mesa_existe:
+                    editar_mesa(pesquisar_mesa(num_mesa))
+                else:
+                    print("Mesa não existe")
             elif opcao_mesa == '4':
-                mesa = str(input("Número da mesa: "))
-                deletar_mesa(pesquisar_mesa(mesa))
+                num_mesa = str(input("Número da mesa: "))
+                mesa_existe = verifica_mesa_existe(num_mesa)
+                if mesa_existe:
+                    deletar_mesa(pesquisar_mesa(num_mesa))
+                else:
+                    print("Mesa não existe")
+            elif opcao_mesa == '5':
+                num_mesa = str(input("Número da mesa: "))
+                mesa_existe = verifica_mesa_existe(num_mesa)
+                if mesa_existe:
+                    pesquisar_mesa(num_mesa)
+                else:
+                    print("Mesa não existe")
         if opcao == '2':
             opcao_produto = menu_produtos()
             if opcao_produto == '1':

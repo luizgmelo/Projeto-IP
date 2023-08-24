@@ -9,25 +9,30 @@ def salvar_mesa(mesa):
     mesas.append(mesa)
     return True
 
+def verifica_mesa_existe(numero):
+    for mesa in mesas:
+        if numero == mesa["numero"]:
+            return True 
+    return False
+
 def pesquisar_mesa(numero):
     for mesa in mesas:
         if numero == mesa["numero"]:
+            print("="*30)
+            print("Dados da mesa {}".format(numero).center(30))
+            print("="*30)
+            print("Mesa", mesa["numero"])
+            print("Quantidade de Cadeiras:", mesa["quant_cadeiras"])
+            print("="*30)
             return mesa
-    return False
 
 def editar_mesa(mesa):
-    if mesa:
-        mesa["quant_cadeiras"] = int(input("Digite a nova quantidade de cadeiras: "))
-        return print("Mesa editada com sucesso")
-    else:
-        return print("Mesa não existe")
+    mesa["quant_cadeiras"] = int(input("Digite a nova quantidade de cadeiras: "))
+    return print("Mesa editada com sucesso")
 
 def deletar_mesa(mesa):
-    if mesa:
-        mesas.remove(mesa)
-        return print("Mesa deletada com sucesso")
-    else:
-        return print("Mesa não existe")
+    mesas.remove(mesa)
+    return print("Mesa deletada com sucesso")
 
 def listar_mesas():
     if mesas == []:
