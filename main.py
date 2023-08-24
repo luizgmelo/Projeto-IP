@@ -10,6 +10,7 @@ from menus import *
 
 def main():
     ler_banco_mesa()
+    ler_banco_produtos()
     while True:
         sleep(3)
         opcao = menu_principal()
@@ -78,6 +79,7 @@ def main():
                     print("Funcionário não existe")              
         if opcao == '4':
             salvar_banco_mesa()
+            salvar_banco_produtos()
             break
            
 

@@ -1,0 +1,20 @@
+[
+    {
+        "nome": "Mussarela",
+        "tamanho": "P",
+        "preco": "50.00",
+        "descricao": "Queijo, Tomate, Oregano"
+    },
+    {
+        "nome": "Calabresa",
+        "tamanho": "G",
+        "preco": "95.00",
+        "descricao": "Calabresa, Cebola, Azeitona, Oregano, Queijo Mussarela"
+    },
+    {
+        "nome": "Vegana",
+        "tamanho": "M",
+        "preco": "55.00",
+        "descricao": "Queijo Vegano, Cebola, Azeitona, Tomate"
+    }
+]
