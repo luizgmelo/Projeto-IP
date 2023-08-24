@@ -1,4 +1,5 @@
 from menus import menu_editar_funcionario
+import json
 
 funcionarios = []
 
@@ -60,3 +61,11 @@ def listar_funcionario():
             print("Função:",funcionario["funcao"])
             print("="*30)
         print("="*30)
+
+def salvar_banco_funcionarios():
+    with open("banco_funcionarios.json", "w") as banco_funcionario:
+        json.dump(funcionarios, banco_funcionario, indent=4)
+def ler_banco_funcionarios():
+    with open("banco_funcionarios.json", "r") as banco_funcionario:
+        global funcionarios
+        funcionarios = json.load(banco_funcionario)

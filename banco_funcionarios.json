@@ -1,0 +1,17 @@
+[
+    {
+        "nome": "Rafael",
+        "salario": "1250",
+        "funcao": "Cozinheiro"
+    },
+    {
+        "nome": "Maria",
+        "salario": "1250",
+        "funcao": "Cozinheiro"
+    },
+    {
+        "nome": "Matheus",
+        "salario": "1250",
+        "funcao": "Garcom"
+    }
+]
