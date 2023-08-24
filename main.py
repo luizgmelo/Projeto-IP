@@ -6,14 +6,10 @@ from funcionario import *
 from menus import *
 
 
-banco_de_dados = {
-    "mesas": mesas,
-    "pedidos": pedidos,
-    "produtos": produtos
-    }
+
 
 def main():
-    id_produto = 0 
+    ler_banco_mesa()
     while True:
         sleep(3)
         opcao = menu_principal()
@@ -35,12 +31,11 @@ def main():
         if opcao == '2':
             opcao_produto = menu_produtos()
             if opcao_produto == '1':
-                id_produto += 1
                 nome = str(input("Sabor da pizza: "))
                 tamanho = str(input("Tamanho (P/M/G): "))
                 preco = str(input("Preço: "))
                 descricao = str(input("Descricao: "))
-                salvar_produto(criar_produto(id_produto, nome, tamanho, preco, descricao))
+                salvar_produto(criar_produto(nome, tamanho, preco, descricao))
                 print("Produto cadastrado com sucesso!")
             elif opcao_produto == '2':
                 listar_produtos()
@@ -80,7 +75,11 @@ def main():
                 if funcionario_existe:
                     pesquisar_funcionario(nome_funcionario)
                 else:
-                    print("Funcionário não existe")
+                    print("Funcionário não existe")              
+        if opcao == '4':
+            salvar_banco_mesa()
+            break
+           
 
         
 main()

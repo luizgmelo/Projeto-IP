@@ -1,3 +1,5 @@
+import json
+
 mesas = []
 
 def criar_mesa(numero, quant_cadeiras):
@@ -40,4 +42,11 @@ def listar_mesas():
             print("-"*30)
         print("="*30)
 
+def ler_banco_mesa():
+    with open('banco_mesa.json', 'r') as banco_mesa:
+        global mesas
+        mesas = json.load(banco_mesa)
 
+def salvar_banco_mesa():
+    with open('banco_mesa.json', 'w') as banco_mesa:
+        json.dump(mesas, banco_mesa, indent=4)
