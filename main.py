@@ -109,6 +109,12 @@ def main():
                     pesquisar_funcionario(nome_funcionario)
                 else:
                     print("Funcionário não existe")              
+            elif opcao_funcionario == '6':
+                print("Para pesquisar por data digite a data no seguinte formato (dia/mes/ano)")
+                data_inicial = str(input("Data Inicial da pesquisa: ")) 
+                data_final =  str(input("Data Final final da pesquisa: "))
+                pesquisar_funcionario_por_data(data_inicial, data_final)
+
         if opcao == '4':
             salvar_banco_mesa()
             salvar_banco_produtos()

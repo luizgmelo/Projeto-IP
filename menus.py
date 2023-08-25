@@ -49,7 +49,8 @@ def menu_funcionario():
             [3] - EDITAR FUNCIONÁRIO
             [4] - DELETAR FUNCIONÁRIO
             [5] - PESQUISAR FUNCIONÁRIO
-            [6] - VOLTAR""") 
+            [6] - PESQUISAR FUNCIONARIO POR DATA DE CONTRATO
+            [7] - VOLTAR""") 
     print('='*20)
 
     opcao = str(input("Opção: "))

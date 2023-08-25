@@ -2,16 +2,25 @@
     {
         "nome": "Rafael",
         "salario": "1250",
-        "funcao": "Cozinheiro"
+        "funcao": "Cozinheiro",
+        "data_contrato": "12/06/2023"
     },
     {
         "nome": "Maria",
         "salario": "1250",
-        "funcao": "Cozinheiro"
+        "funcao": "Cozinheiro",
+        "data_contrato": "05/01/2023"
     },
     {
         "nome": "Matheus",
         "salario": "1250",
-        "funcao": "Garcom"
+        "funcao": "Garcom",
+        "data_contrato": "22/02/2023"
+    },
+    {
+        "nome": "Mario",
+        "salario": "1150",
+        "funcao": "Entregador",
+        "data_contrato": "25/08/2023"
     }
 ]

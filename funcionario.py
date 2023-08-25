@@ -1,10 +1,12 @@
 from menus import menu_editar_funcionario
 import json
+from datetime import datetime
 
 funcionarios = []
+data_hoje = datetime.today()
 
 def criar_funcionario(nome, salario, funcao):
-    return {"nome": nome.capitalize(),"salario": salario,"funcao": funcao}
+    return {"nome": nome.capitalize(),"salario": salario,"funcao": funcao, "data_contrato": data_hoje.strftime('%d/%m/%Y')}
 
 def salvar_funcionario(funcionario):
     funcionarios.append(funcionario)
@@ -27,6 +29,21 @@ def pesquisar_funcionario(nome):
             print("Função:",funcionario["funcao"])
             return funcionario
     print("="*30)
+
+def pesquisar_funcionario_por_data(data_inicial, data_final):
+    data_inicial_formato_data = datetime.strptime(data_inicial, '%d/%m/%Y').date()
+    data_final_formato_data = datetime.strptime(data_final, '%d/%m/%Y').date()
+    if funcionarios == []:
+        print("Não há funcionario cadastrado")
+    for funcionario in funcionarios:
+        data_contrato_formato_data = datetime.strptime(funcionario["data_contrato"], '%d/%m/%Y').date()
+        if data_inicial_formato_data <= data_contrato_formato_data <= data_final_formato_data:
+            print("="*30)
+            print("Nome do Funcionário:",funcionario["nome"])
+            print("Salário:",funcionario["salario"])
+            print("Função:",funcionario["funcao"])
+            print("Data de Contrato:",funcionario["data_contrato"])
+            print("="*30)
     
 def editar_funcionario(funcionario):
     opcao = menu_editar_funcionario()
@@ -59,13 +76,17 @@ def listar_funcionario():
             print("Nome do Funcionário:",funcionario["nome"])
             print("Salário:",funcionario["salario"])
             print("Função:",funcionario["funcao"])
+            print("Data de Contrato:",funcionario["data_contrato"])
             print("="*30)
         print("="*30)
 
 def salvar_banco_funcionarios():
     with open("banco_funcionarios.json", "w") as banco_funcionario:
         json.dump(funcionarios, banco_funcionario, indent=4)
+
 def ler_banco_funcionarios():
     with open("banco_funcionarios.json", "r") as banco_funcionario:
         global funcionarios
         funcionarios = json.load(banco_funcionario)
+
+
