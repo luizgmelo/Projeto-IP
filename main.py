@@ -1,6 +1,5 @@
 from time import sleep
 from mesa import *
-from pedidos import *
 from produtos import *
 from funcionario import *
 from menus import *
